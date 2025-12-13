@@ -1,0 +1,43 @@
+
+/* Estilos do corpo da página */
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos do cabeçalho h1 */
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2em;
+  margin: 20px;
+}
+
+/* Estilos das imagens laterais (esquerda e direita) */
+.left-img, .right-img {
+  height: 210px;
+  width: auto;
+}
+
+/* Container central para empilhar logo e texto */
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilos do logo central */
+.center-img {
+  height: 200px;
+  width: auto;
+}
+
+/* Estilos da imagem de texto abaixo do logo */
+.text-img {
+  height: 200px;
+  width: auto;
+  margin-top: -40px;
+}
