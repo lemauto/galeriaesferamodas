@@ -1,43 +1,144 @@
-
-/* Estilos do corpo da página */
-body {
-  background-color: black;
-  color: white;
+/* ================= RESET ================= */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
-/* Estilos do cabeçalho h1 */
-h1 {
+body {
+  background: #000;
+}
+
+/* ================= TOPO ================= */
+.topo {
+  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 2em;
-  margin: 20px;
+  justify-content: center;
 }
 
-/* Estilos das imagens laterais (esquerda e direita) */
-.left-img, .right-img {
-  height: 210px;
-  width: auto;
+.fundo.titulo {
+  width: 100%;
+  max-width: 1000px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 6px 25px rgba(0,0,0,.35);
 }
 
-/* Container central para empilhar logo e texto */
-.center-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* ================= PESQUISA ================= */
+.pesquisa {
+  position: relative;
+  width: 90%;
+  max-width: 380px;
+  margin: 50px auto 0;
 }
 
-/* Estilos do logo central */
-.center-img {
+.pesquisa input {
+  width: 100%;
+  padding: 14px 45px 14px 18px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.25);
+}
+
+.pesquisa button {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* ================= GALERIA ================= */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  padding: 20px;
+}
+
+/* ================= CARD ================= */
+.item {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,.25);
+  cursor: pointer;
+  transition: transform .3s;
+}
+
+.item:hover {
+  transform: scale(1.04);
+}
+
+.item img {
+  width: 100%;
   height: 200px;
-  width: auto;
+  object-fit: cover;
 }
 
-/* Estilos da imagem de texto abaixo do logo */
-.text-img {
-  height: 200px;
-  width: auto;
-  margin-top: -40px;
+.item .info {
+  padding: 12px;
+  text-align: center;
+}
+
+.item .info h3 {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.item .info span {
+  font-weight: bold;
+  color: #1e7f5c;
+}
+
+/* ================= MODAL ================= */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.75);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 18px;
+  max-width: 420px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+}
+
+.modal-content img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.close {
+  position: absolute;
+  top: 14px;
+  right: 22px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 600px) {
+  .fundo.titulo {
+    height: 200px;
+  }
+  .item img {
+    height: 170px;
+  }
 }

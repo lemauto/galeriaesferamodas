@@ -1,25 +1,47 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galeria Esfera</title>
+  <title>Catálogo de Roupas</title>
+
   <link rel="stylesheet" href="style.css">
- 
+  <script src="script.js" defer></script>
 </head>
-
-
 <body>
 
-  <h1>
-    <img src="img/lodo esquerdo.png" alt="Lado Esquerdo" class="left-img">
-    <div class="center-container">
-      <img src="img/esfera modas logo editado_Nero_AI_Background_Remover.png" alt="logo esfera titulo" class="center-img">
-      <img src="img/ESFERA MODAS.png" alt="ESFERA MODAS" class="text-img">
+  <!-- ================= TOPO / BANNER ================= -->
+  <header class="topo">
+    <img 
+      src="img/black titulo.jpg" 
+      alt="fundo catalogo" 
+      class="fundo titulo"
+    >
+  </header>
+
+  <!-- ================= PESQUISA ================= -->
+  <div class="pesquisa">
+    <input 
+      type="text" 
+      id="searchInput" 
+      placeholder="Pesquisar código"
+    >
+    <button id="btnSearch" aria-label="Pesquisar">🔍</button>
+  </div>
+
+  <!-- ================= CATÁLOGO ================= -->
+  <section class="galeria" id="galeria"></section>
+
+  <!-- ================= MODAL ================= -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+
+      <img id="modalImg">
+      <h2 id="modalNome"></h2>
+      <p id="modalPreco"></p>
+      <p id="modalDesc"></p>
     </div>
-    <img src="img/logo lado direito.png" alt="Logo Lado Direito" class="right-img">
-  </h1>
+  </div>
 
 </body>
-<script src="script.js"></script>
 </html>
