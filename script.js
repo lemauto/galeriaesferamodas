@@ -40,7 +40,7 @@ searchInput.addEventListener("keypress", e => {
 });
 
 /* ================= NOVO: ESPELHAMENTO BACKEND ================= */
-const API_URL = "https://cadastrocatagoloesfera.infinityfreeapp.com/API/upload.php";
+const API_URL = "https://cadastrocatagoloesfera.infinityfreeapp.com/upload";
 const galeria = document.getElementById("galeria");
 
 const modal = document.getElementById("modal");
